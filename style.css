@@ -4,4 +4,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    background-color: black;
+}
+#game-board {
+    background-color: #ccc;
 }

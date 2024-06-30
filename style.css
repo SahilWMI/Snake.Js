@@ -58,9 +58,3 @@ body, .snake {
     color: #d8ddca;
     display: none;
 }
-.game-border-3, #logo {
-    background-color: #c4cfa3;
-}
-.snake {
-    border: #5a5a5a;
-}

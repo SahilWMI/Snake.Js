@@ -80,3 +80,12 @@ function move() {
         snake.pop();
     }
 }
+
+function startGame() {
+    gameStarted = true;
+    instructionText.style.display = 'none';
+    gameInterval = setInterval(() => {
+        move();
+        draw();
+    }, gameSpeedDelay);
+}

@@ -2,6 +2,7 @@ const BOARD_SIZE = 20;
 const CELL_SIZE = 15;
 const INITIAL_SNAKE_LENGTH = 3;
 
+let gridSize = 20;
 let snake = [{x: 10,y: 10}];
 let direction = 'right';
 let food = [];
@@ -38,5 +39,7 @@ function drawFood() {
 }
 
 function generateFood() {
-    
+    const x = Math.floor(Math.random() * gridSize) + 1;
+    const y = Math.floor(Math.random() * gridSize) + 1;
+    return {x, y};
 }

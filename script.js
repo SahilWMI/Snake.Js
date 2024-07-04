@@ -12,6 +12,8 @@ const board = document.getElementById("game-board");
 
 function draw() {
     board.innerHTML = '';
+    drawSnake();
+    drawSnake();
 }
 function drawSnake() {
     snake.forEach((segment) => {
@@ -42,4 +44,26 @@ function generateFood() {
     const x = Math.floor(Math.random() * gridSize) + 1;
     const y = Math.floor(Math.random() * gridSize) + 1;
     return {x, y};
+}
+
+function move() {
+    const head = {...snake[0]};
+    switch (direction) {
+        case 'right':
+            head.x++;
+            break;
+        case 'left':
+            head--;
+            break;
+        case 'up':
+            head.y--;
+            break;
+        case 'down':
+            head.y++;
+            break;
+    }
+
+    sneak.unshift(head);
+
+    snake.pop();
 }

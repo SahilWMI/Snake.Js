@@ -66,4 +66,17 @@ function move() {
     sneak.unshift(head);
 
     snake.pop();
+
+    if(head.x === food.x && head.y === food.y){
+        food = generateFood();
+        increaseSpeed();
+        clearInterval(gameInterval)
+        gameInterval = setInterval(() => {
+            move();
+            checkCollision();
+            draw();
+        }, gameSpeedDelay);
+    } else {
+        snake.pop();
+    }
 }

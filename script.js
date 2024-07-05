@@ -170,3 +170,12 @@ function stopGame() {
   instructionText.style.display = 'block';
   logo.style.display = 'block';
 }
+
+function updateHighScore() {
+  const currentScore = snake.length - 1;
+  if (currentScore > highScore) {
+    highScore = currentScore;
+    highScoreText.textContent = highScore.toString().padStart(3, '0');
+  }
+  highScoreText.style.display = 'block';
+}

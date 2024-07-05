@@ -148,3 +148,13 @@ function checkCollision() {
     }
   }
 }
+
+function resetGame() {
+  updateHighScore();
+  stopGame();
+  snake = [{ x: 10, y: 10 }];
+  food = generateFood();
+  direction = 'right';
+  gameSpeedDelay = 200;
+  updateScore();
+}
